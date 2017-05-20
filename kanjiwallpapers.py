@@ -44,6 +44,9 @@ from kanjiwords import data_filename, pickle_filename, data_dir, _pickle_path, _
 # Kanji wallpapers addon folder
 addon_folder = "kanji_wallpapers"
 
+# CJKdata directory
+os.environ["CJKDATA"] = os.path.join(mw.pm.addonFolder(), addon_folder, "cjkdata/cjkdata/")
+
 # Fonts directory
 fonts_directory = "fonts"
 
@@ -201,9 +204,9 @@ def createSettingsDialog():
 
         _selected_deck = deck_combo.currentText()
         if len(pattern_field.text().strip()) != 0:
-            _pattern = pattern_field.text().lower()
+            _pattern = pattern_field.text()
         if len(card_type_field.text().strip()) != 0:
-            _card_type = card_type_field.text().lower()
+            _card_type = card_type_field.text()
         _max_entry_words = spin_max_entries.value()    
 
         wallpaper_resolution = resolution_combo.currentText()

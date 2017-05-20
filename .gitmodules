@@ -1,0 +1,3 @@
+[submodule "kanji_wallpapers/cjkdata"]
+	path = kanji_wallpapers/cjkdata
+	url = https://github.com/larsyencken/cjkdata
